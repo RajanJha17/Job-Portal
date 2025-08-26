@@ -4,9 +4,11 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import * as Joi from '@hapi/joi';
 import { MongooseModule } from '@nestjs/mongoose';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
+    UserModule,
     ConfigModule.forRoot({
       
       isGlobal: true,
@@ -15,6 +17,7 @@ import { MongooseModule } from '@nestjs/mongoose';
       }),
     }),
     MongooseModule.forRoot(process.env.DATABASE_URL!),
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
