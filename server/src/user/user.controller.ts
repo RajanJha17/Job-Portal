@@ -9,6 +9,6 @@ export class UserController {
     }
     @Post('/register')
     registerUser(@Body() body){
-        this.userService.registerUser(body.name,body.email, body.password, body.newsletter, body.mailContent);
+        return this.userService.registerUser(body.name,body.email, body.password, body.newsletter, body.mailContent);
     } 
 }

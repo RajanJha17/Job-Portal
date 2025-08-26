@@ -3,6 +3,7 @@ export class CustomMessages {
   static INTERNAL_SERVER_ERROR = 'Internal Server Error';
   static UNAUTHORIZED = 'Unauthorized access';
   static FORBIDDEN = 'You do not have permission to perform this action';
+  static SOMETHING_WENT_WRONG = 'Something went wrong';
 
   // User / Auth
   static USER_REGISTERED_SUCCESSFULLY = 'User registered successfully';
@@ -10,6 +11,7 @@ export class CustomMessages {
   static USER_LOGOUT_SUCCESSFULLY = 'User logged out successfully';
   static PROFILE_UPDATED_SUCCESSFULLY = 'Profile updated successfully';
   static PASSWORD_CHANGED_SUCCESSFULLY = 'Password changed successfully';
+  static USER_ALREADY_EXISTS = 'User with this email already exists';
 
   // Jobs
   static JOB_POSTED_SUCCESSFULLY = 'Job posted successfully';
