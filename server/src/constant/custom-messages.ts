@@ -12,6 +12,11 @@ export class CustomMessages {
   static PROFILE_UPDATED_SUCCESSFULLY = 'Profile updated successfully';
   static PASSWORD_CHANGED_SUCCESSFULLY = 'Password changed successfully';
   static USER_ALREADY_EXISTS = 'User with this email already exists';
+  static USER_NOT_FOUND = 'User not found';
+  static USER_VERIFIED_SUCCESSFULLY = 'User verified successfully';
+  static TEST_ACCOUNT_EXPIRED = 'Test account expired';
+  static USER_NOT_ACTIVE = 'User not active';
+  static USER_BLOCKED = 'User is  blocked';
 
   // Jobs
   static JOB_POSTED_SUCCESSFULLY = 'Job posted successfully';

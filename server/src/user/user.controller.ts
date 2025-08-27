@@ -11,4 +11,14 @@ export class UserController {
     registerUser(@Body() body){
         return this.userService.registerUser(body.name,body.email, body.password, body.newsletter, body.mailContent);
     } 
+
+    @Post('/verify')
+    verifyUser(@Body() body) {
+        return this.userService.verifyUser(body.token);
+    }
+
+    @Post('/login')
+    loginUser(@Body() body) {
+        return this.userService.loginUser(body.email, body.password, body.mailContent);
+    }
 }
