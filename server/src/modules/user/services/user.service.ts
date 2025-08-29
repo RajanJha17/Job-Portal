@@ -2,15 +2,16 @@ import { HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { CustomMessages } from 'src/constant/custom-messages';
-import { User } from 'src/models/user.schema';
+
 import CustomResponse from 'src/response/custom-response';
 import * as crypto from 'crypto';
-import { CreateUserDto } from 'src/dto/create-user.dto';
+import { CreateUserDto } from 'src/modules/user/dto/create-user.dto';
 import { v4 as uuid } from 'uuid';
 import { MailerService } from '@nestjs-modules/mailer';
-import { UserVerification } from 'src/models/user-verification.schema';
-import { TestAccounts } from 'src/models/test-account.schema';
 import { JwtService } from '@nestjs/jwt';
+import { User } from 'src/models/user/user.schema';
+import { UserVerification } from 'src/models/user/user-verification.schema';
+import { TestAccounts } from 'src/models/user/test-account.schema';
 
 const TEST_ACCOUNT_EMAIL = 'work@jooob.eu';
 
@@ -203,6 +204,10 @@ export class UserService {
                 })
             }
         }
+
+    }
+
+    async sendInvitation(){
 
     }
 }

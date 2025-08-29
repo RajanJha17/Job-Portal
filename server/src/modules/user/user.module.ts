@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
-import { UserService } from './user.service';
-import { UserController } from './user.controller';
 import { MongooseModule } from '@nestjs/mongoose';
-import { UserSchema } from 'src/models/user.schema';
-import { UserVerificationSchema } from 'src/models/user-verification.schema';
-import { TestAccountsSchema } from 'src/models/test-account.schema';
 import { JwtService } from '@nestjs/jwt';
+import { UserSchema } from 'src/models/user/user.schema';
+import { UserVerificationSchema } from 'src/models/user/user-verification.schema';
+import { TestAccountsSchema } from 'src/models/user/test-account.schema';
+import { UserController } from './controllers/user.controller';
+import { UserService } from './services/user.service';
 
 @Module({
   imports: [
